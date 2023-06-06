@@ -45,16 +45,15 @@ public class PersonController {
         return "edit";
     }
 
-//    @RequestMapping(value = "/{id}")
-//    public String update(@ModelAttribute("person") Person person, @PathVariable("id") int id) {
-//            personDAO.update(id, person);
-//            return "redirect:/people";
-//    }
+    @PutMapping(value = "/{id}")
+    public String update(@ModelAttribute("person") Person person, @PathVariable("id") int id) {
+            personDAO.update(id, person);
+            return "redirect:/people";
+    }
 
-    @RequestMapping(value = "/{id}")
+    @DeleteMapping(value = "/{id}")
     public String delete(@PathVariable("id") int id) {
         personDAO.delete(id);
         return "redirect:/people";
     }
-
 }
