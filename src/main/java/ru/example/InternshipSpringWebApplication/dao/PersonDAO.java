@@ -30,17 +30,19 @@ public class PersonDAO {
         return people.stream().filter(person -> person.getId() == id).findAny().orElse(null);
     }
 
-    public void addPerson(Person person){
+    public Person addPerson(Person person){
         person.setId(++PERSON_COUNT);
         people.add(person);
+        return person;
     }
 
-    public void update(int id, Person updatedPerson){
+    public Person update(int id, Person updatedPerson){
         Person person = show(id);
 
         person.setAge(updatedPerson.getAge());
         person.setName(updatedPerson.getName());
         person.setEmail(updatedPerson.getEmail());
+        return person;
     }
 
     public void delete(int id){
