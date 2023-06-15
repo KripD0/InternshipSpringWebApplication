@@ -1,0 +1,20 @@
+app:
+  name: SpringApplication
+  version: 1.0
+spring:
+  profiles:
+    active: present
+---
+#Профиль dev
+spring:
+  config:
+    activate:
+      on-profile: dev
+realise: 2.0
+---
+#Профиль present
+spring:
+  config:
+    activate:
+      on-profile: present
+realise: 1.2
