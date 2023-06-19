@@ -2,6 +2,11 @@ app:
   name: SpringApplication
   version: 1.0
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/internship
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
   profiles:
     active: present
 ---
