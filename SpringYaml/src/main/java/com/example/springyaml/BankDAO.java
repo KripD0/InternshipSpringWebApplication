@@ -25,20 +25,20 @@ public class BankDAO {
         return jdbcTemplate.query("SELECt * FROM bank", new BeanPropertyRowMapper<>(Bank.class));
     }
 
-    @PostConstruct
-    public void updateAllBanks(){
-        List<Bank> list = selectAllBank();
-        jdbcTemplate.batchUpdate("UPDATE bank SET name = ? WHERE  id = ?", new BatchPreparedStatementSetter() {
-            @Override
-            public void setValues(PreparedStatement ps, int i) throws SQLException {
-                ps.setString(1, "Альфа");
-                ps.setInt(2, list.get(i).getId());
-            }
-
-            @Override
-            public int getBatchSize() {
-                return list.size();
-            }
-        });
-    }
+//    @PostConstruct
+//    public void updateAllBanks(){
+//        List<Bank> list = selectAllBank();
+//        jdbcTemplate.batchUpdate("UPDATE bank SET name = ? WHERE  id = ?", new BatchPreparedStatementSetter() {
+//            @Override
+//            public void setValues(PreparedStatement ps, int i) throws SQLException {
+//                ps.setString(1, "Альфа");
+//                ps.setInt(2, list.get(i).getId());
+//            }
+//
+//            @Override
+//            public int getBatchSize() {
+//                return list.size();
+//            }
+//        });
+//    }
 }

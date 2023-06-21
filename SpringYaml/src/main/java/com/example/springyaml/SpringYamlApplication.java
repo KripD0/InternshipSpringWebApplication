@@ -8,6 +8,10 @@ public class SpringYamlApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringYamlApplication.class, args);
+
+        HibernateTest hibernateTest = new HibernateTest();
+        hibernateTest.outputAllPerson();
+        hibernateTest.updateAllBanksName();
     }
 
 }

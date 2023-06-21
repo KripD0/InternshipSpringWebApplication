@@ -16,11 +16,11 @@ public class PersonDAO {
 
     //TODO Спросить как вызывать этот медот, пытался создать Bean в main, вылезала ошибка. Spring Boot запускается и пишет какой то Hikari Datasource, в файле конфигурации нужно конкретно его указывать или необязательно.
 
-    @PostConstruct
-    public void selectAllPerson() {
-        jdbcTemplate.query("SELECT * FROM person", new BeanPropertyRowMapper<>(Person.class))
-                .stream()
-                .map(Person::getFullName)
-                .forEach(System.out::println);
-    }
+//    @PostConstruct
+//    public void selectAllPerson() {
+//        jdbcTemplate.query("SELECT * FROM person", new BeanPropertyRowMapper<>(Person.class))
+//                .stream()
+//                .map(Person::getFullName)
+//                .forEach(System.out::println);
+//    }
 }
