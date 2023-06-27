@@ -1,13 +1,10 @@
-package com.example.springyaml;
+package com.example.springyaml.dao;
 
-import jakarta.annotation.PostConstruct;
-import org.springframework.jdbc.core.BatchPreparedStatementSetter;
+import com.example.springyaml.entity.Bank;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.List;
 
 @Service

@@ -1,5 +1,6 @@
-package com.example.springyaml;
+package com.example.springyaml.dao;
 
+import com.example.springyaml.entity.Person;
 import jakarta.annotation.PostConstruct;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,7 +15,8 @@ public class PersonDAO {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    //TODO Спросить как вызывать этот медот, пытался создать Bean в main, вылезала ошибка. Spring Boot запускается и пишет какой то Hikari Datasource, в файле конфигурации нужно конкретно его указывать или необязательно.
+    //TODO Спросить как вызывать этот медот, пытался создать Bean в main, вылезала ошибка.
+    //Spring Boot запускается и пишет какой то Hikari Datasource, в файле конфигурации нужно конкретно его указывать или необязательно.
 
 //    @PostConstruct
 //    public void selectAllPerson() {

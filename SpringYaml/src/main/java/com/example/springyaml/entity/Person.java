@@ -1,19 +1,19 @@
-package com.example.springyaml;
+package com.example.springyaml.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "Person")
 @Data
 @NoArgsConstructor
-@Table(name = "Bank")
-public class Bank {
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "full_name")
+    private String fullName;
 }
